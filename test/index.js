@@ -6,6 +6,8 @@
  * npm test
  */
 
+require("./main");
+
 require("./ext/object");
 require("./ext/string");
 require("./ext/number");

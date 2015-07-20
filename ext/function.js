@@ -36,7 +36,7 @@ FunctionProto.partArray = function (args) {
  * @alias Function#mixin
  * @desc Assigns properties of the given object into the function's prototype.
  * @param {Object} object
- * @returns {this}
+ * @returns {@}
  */
 FunctionProto.mixin = function (obj) {
   var proto = this.prototype;
@@ -49,7 +49,7 @@ FunctionProto.mixin = function (obj) {
  * @alias Function#assign
  * @desc Assigns properties of the given object directly into the function as static properties.
  * @param {Object} object
- * @returns {this}
+ * @returns {@}
  */
 FunctionProto.assign = function (obj) {
   var proto = this.prototype;
