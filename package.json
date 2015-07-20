@@ -1,0 +1,22 @@
+{
+  "name": "enix",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/index"
+  },
+  "author": "Radomír Žemlička <info@razem.cz> (http://razem.cz)",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Razem/Legio.git"
+  },
+  "dependencies": {
+    "core-js": "~0.9.18"
+  },
+  "devDependencies": {
+    "expect.js": "~0.3.1",
+    "mocha": "^2.2.5"
+  }
+}
