@@ -1,5 +1,11 @@
 'use strict';
 
+/** @module enix */
+
+/**
+ * @alias module:enix
+ * @ignore
+ */
 var core = require("core-js");
 
 delete global.core;
@@ -21,7 +27,7 @@ require("./ext/date");
  * @param {Function} callback
  * @param {*} that
  * @param {Boolean} [arrayLike=false] forces the loop to iterate the object the same way as an array
- * @returns {Object|Array} The given collection
+ * @returns {collection} The given collection
  */
 core.$foreach = function (obj, func, that, arrayLike) {
   if (Array.is(obj) || arrayLike) {

@@ -19,7 +19,7 @@ Array.is = Array.isArray;
  * Adds items to the array.
  * @alias Array#add
  * @param {Array}
- * @returns {@}
+ * @returns {this}
  */
 ArrayProto.add = function (items) {
   arrayPush.apply(this, items);
@@ -30,7 +30,7 @@ ArrayProto.add = function (items) {
  * Similar to {@link Array#add}, but accepts items as arguments.
  * @alias Array#tack
  * @param {...*} items
- * @returns {@}
+ * @returns {this}
  */
 ArrayProto.tack = function () {
   arrayPush.apply(this, arguments);
@@ -41,7 +41,7 @@ ArrayProto.tack = function () {
  * Removes the item (if it is in the array) from the array.
  * @alias Array#remove
  * @param {*}
- * @returns {@}
+ * @returns {this}
  */
 ArrayProto.remove = function (item) {
   var ind = this.indexOf(item);
@@ -54,7 +54,7 @@ ArrayProto.remove = function (item) {
  * @alias Array#removeAt
  * @param {Number} [index=0]
  * @param {Number} [amount=1]
- * @returns {@}
+ * @returns {this}
  */
 ArrayProto.removeAt = function (ind, amount) {
   if (amount === undefined) amount = 1;
@@ -67,7 +67,7 @@ ArrayProto.removeAt = function (ind, amount) {
  * @alias Array#insert
  * @param {Number}
  * @param {Array}
- * @returns {@}
+ * @returns {this}
  */
 ArrayProto.insert = function (index, items) {
   arraySplice.apply(this, [index, 0].add(items));
