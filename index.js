@@ -11,7 +11,6 @@ var core = require("core-js");
 delete global.core;
 delete global.delay;
 delete global.log;
-delete global.$for;
 
 require("./ext/object");
 require("./ext/array");

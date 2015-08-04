@@ -77,6 +77,43 @@ describe("Number", function () {
       expect((100).log()).to.be(Math.log(100));
       expect((100).log(10)).to.be(Math.log(100) / Math.log(10));
     });
+
+    it("counts an absolute value", function () {
+      expect((-42).abs()).to.be(Math.abs(-42));
+      expect((42).abs()).to.be(Math.abs(42));
+    });
+
+    it("performs rounding (includin floor and ceil)", function () {
+      var a = 14.25, b = 15.65;
+
+      expect(a.round()).to.be(Math.round(a));
+      expect(b.round()).to.be(Math.round(b));
+
+      expect(a.floor()).to.be(Math.floor(a));
+      expect(b.floor()).to.be(Math.floor(b));
+
+      expect(a.ceil()).to.be(Math.ceil(a));
+      expect(b.ceil()).to.be(Math.ceil(b));
+    });
+
+    it("counts powers, the square root & the cubic root", function () {
+      expect((2).pow(0)).to.be(Math.pow(2, 0));
+      expect((2).pow(3)).to.be(Math.pow(2, 3));
+      expect((2).pow(4)).to.be(Math.pow(2, 4));
+      expect((2).pow(-2)).to.be(Math.pow(2, -2));
+
+      var a = (2).pow();
+      expect(a).not.to.be(a);
+
+      expect((64).sqrt()).to.be(Math.sqrt(64));
+      expect((8).cbrt()).to.be(Math.cbrt(8));
+    });
+
+    it("returns the signum value", function () {
+      expect((-5).sign()).to.be(Math.sign(-5));
+      expect((0).sign()).to.be(Math.sign(0));
+      expect((7).sign()).to.be(Math.sign(7));
+    });
   });
 
   describe("#toDeg() & #toRad()", function () {

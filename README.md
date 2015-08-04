@@ -9,7 +9,6 @@ Enix
     * arrayLike - for NodeLists etc.
 
   * core-js features, anything else remains global
-  .$for
   .delay
   .log
 
@@ -81,12 +80,20 @@ Number
   .FORMAT_THOUSANDS_SEPARATOR = ","
   .FORMAT_DECIMAL_MARK = "."
   #format(decimals = 0, thousandsSep?, decMark?) -> String
+  #toRad() -> Number
+  #toDeg() -> Number
   #mod(n) -> Number
     * positive value of modulo
   #roundTo(decimals) -> Number
   #log(base = Math.E) -> Number
-  #toRad() -> Number
-  #toDeg() -> Number
+  #abs() -> Number
+  #round() -> Number
+  #floor() -> Number
+  #ceil() -> Number
+  #pow(exp) -> Number
+  #sqrt() -> Number
+  #cbrt() -> Number
+  #sign() -> Number
 
 Date
   #getISODay() -> Number

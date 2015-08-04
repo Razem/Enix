@@ -103,6 +103,20 @@ NumberProto.format = function (dec, thousandsSep, decMark) {
   return intPart + (fracPart ? decMark + fracPart : "");
 };
 
+/**
+ * Converts degrees to radians.
+ * @alias Number#toRad
+ * @returns {Number}
+ */
+NumberProto.toRad = function () { return this * Math.PI / 180; };
+
+/**
+ * Converts radians to degrees.
+ * @alias Number#toDeg
+ * @returns {Number}
+ */
+NumberProto.toDeg = function () { return this * 180 / Math.PI; };
+
 // Math functions added to the Number's prototype
 
 /**
@@ -131,15 +145,50 @@ NumberProto.roundTo = function (dec) {
 NumberProto.log = function (base) { return base ? Math.log(this) / Math.log(base) : Math.log(this); };
 
 /**
- * Converts degrees to radians.
- * @alias Number#toRad
+ * @alias Number#abs
  * @returns {Number}
  */
-NumberProto.toRad = function () { return this * Math.PI / 180; };
+NumberProto.abs = function () { return Math.abs(this); };
 
 /**
- * Converts radians to degrees.
- * @alias Number#toDeg
+ * @alias Number#round
  * @returns {Number}
  */
-NumberProto.toDeg = function () { return this * 180 / Math.PI; };
+NumberProto.round = function () { return Math.round(this); };
+
+/**
+ * @alias Number#floor
+ * @returns {Number}
+ */
+NumberProto.floor = function () { return Math.floor(this); };
+
+/**
+ * @alias Number#ceil
+ * @returns {Number}
+ */
+NumberProto.ceil = function () { return Math.ceil(this); };
+
+/**
+ * @alias Number#pow
+ * @param {Number}
+ * @returns {Number}
+ */
+NumberProto.pow = function (exp) { return Math.pow(this, exp); };
+
+/**
+ * @alias Number#sqrt
+ * @returns {Number}
+ */
+NumberProto.sqrt = function () { return Math.sqrt(this); };
+
+/**
+ * @alias Number#cbrt
+ * @returns {Number}
+ */
+NumberProto.cbrt = function () { return Math.cbrt(this); };
+
+/**
+ * @alias Number#sign
+ * @returns {Number} (-1 | 0 | 1)
+ */
+NumberProto.sign = function () { return Math.sign(this); };
