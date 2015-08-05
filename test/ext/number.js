@@ -16,6 +16,17 @@ describe("Number", function () {
     });
   });
 
+  describe(".isInt()", function () {
+    it("checks if the value passed is an integer", function () {
+      expect(Number.isInt(42)).to.be.ok();
+      expect(Number.isInt(42.42)).not.to.be.ok();
+      expect(Number.isInt("42")).not.to.be.ok();
+      expect(Number.isInt(NaN)).not.to.be.ok();
+      expect(Number.isInt(Infinity)).not.to.be.ok();
+      expect(Number.isInt({})).not.to.be.ok();
+    });
+  });
+
   describe(".isNumeric()", function () {
     it("checks if the value passed is numeric", function () {
       expect(Number.isNumeric(42)).to.be.ok();
@@ -113,6 +124,21 @@ describe("Number", function () {
       expect((-5).sign()).to.be(Math.sign(-5));
       expect((0).sign()).to.be(Math.sign(0));
       expect((7).sign()).to.be(Math.sign(7));
+    });
+
+    it("returns the truncated value", function () {
+      expect((0.1).trunc()).to.be(0);
+      expect((0.5).trunc()).to.be(0);
+      expect((0.7).trunc()).to.be(0);
+      expect((-0.1).trunc()).to.be(0);
+      expect((-0.5).trunc()).to.be(0);
+      expect((-0.7).trunc()).to.be(0);
+      expect((10.1).trunc()).to.be(10);
+      expect((10.5).trunc()).to.be(10);
+      expect((10.7).trunc()).to.be(10);
+      expect((-10.1).trunc()).to.be(-10);
+      expect((-10.5).trunc()).to.be(-10);
+      expect((-10.7).trunc()).to.be(-10);
     });
   });
 

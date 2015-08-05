@@ -9,9 +9,10 @@
 require("./main");
 
 require("./ext/object");
-require("./ext/string");
-require("./ext/number");
 require("./ext/array");
-require("./ext/boolean");
 require("./ext/function");
+require("./ext/string");
+require("./ext/math");
+require("./ext/number");
+require("./ext/boolean");
 require("./ext/date");

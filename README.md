@@ -67,13 +67,18 @@ String
   #parametrize() -> String
     * URI-safe string
 
+Math
+  .randomInt(from, to) -> Number [from;to]
+  .randomFloat(from, to) -> Number [from;to)
+
 Number
   .is(obj) -> Boolean
   .Infinity
   .global
     .isNaN
     .isFinite
-  .isNumeric(obj) -> Boolean
+  .isInt(var) -> Boolean
+  .isNumeric(val) -> Boolean
   #limitBottom(n: Number) -> Number
   #limitTop(n: Number) -> Number
   #limit(n1: Number, n2: Number) -> Number
@@ -94,6 +99,7 @@ Number
   #sqrt() -> Number
   #cbrt() -> Number
   #sign() -> Number
+  #trunc() -> Number
 
 Date
   #getISODay() -> Number

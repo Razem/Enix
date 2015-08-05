@@ -31,6 +31,13 @@ Number.global = {
 };
 
 /**
+ * @function
+ * @param {*} value
+ * @returns {Boolean}
+ */
+Number.isInt = Number.isInteger;
+
+/**
  * @param {*} value
  * @returns {Boolean}
  */
@@ -192,3 +199,9 @@ NumberProto.cbrt = function () { return Math.cbrt(this); };
  * @returns {Number} (-1 | 0 | 1)
  */
 NumberProto.sign = function () { return Math.sign(this); };
+
+/**
+ * @alias Number#trunc
+ * @returns {Number}
+ */
+NumberProto.trunc = function () { return Math.trunc(this); };
