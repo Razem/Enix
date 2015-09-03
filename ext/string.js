@@ -56,7 +56,7 @@ StringProto.decodeURI = function (partial) { return partial ? decURI(this) : dec
  * @returns {String}
  */
 StringProto.pad = function (n, str) {
-  return this.lpad(this.length + ((n - this.length) / 2).floor(), str).rpad(n, str);
+  return this.padLeft(this.length + ((n - this.length) / 2).floor(), str).padRight(n, str);
 };
 
 /**
@@ -96,31 +96,6 @@ StringProto.assign = function (obj) {
 StringProto.normalizeLines = function () {
   return this.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
 };
-
-if (!StringProto.trimLeft) {
-  var trimLeftRgx = /^\s+/g;
-  StringProto.trimLeft = function () { return this.replace(trimLeftRgx, ""); };
-}
-if (!StringProto.trimRight) {
-  var trimRightRgx = /\s+$/g;
-  StringProto.trimRight = function () { return this.replace(trimRightRgx, ""); };
-}
-
-/**
- * @alias String#ltrim
- * @memberof String
- * @instance
- * @returns {String}
- */
-StringProto.ltrim = StringProto.trimLeft;
-
-/**
- * @alias String#rtrim
- * @memberof String
- * @instance
- * @returns {String}
- */
-StringProto.rtrim = StringProto.trimRight;
 
 /**
  * @alias String#repeatUntil

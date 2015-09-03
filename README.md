@@ -52,8 +52,6 @@ String
     * "{a} {b}".assign({ a: 1, b: 2 }) === "1 2"
   #normalizeLines() -> String
     * uses just \n
-  #ltrim() -> String
-  #rtrim() -> String
   #repeatUntil(length) -> String
     * "ab".repeatUntil(5) === "ababa"
   #substr(index, length) -> String

@@ -54,8 +54,8 @@ describe("String", function () {
     it("pads the string to a given size", function () {
       expect("a".pad(3)).to.be(" a ");
       expect("a".pad(4)).to.be(" a  ");
-      expect("a".lpad(3)).to.be("  a");
-      expect("a".rpad(3)).to.be("a  ");
+      expect("a".padLeft(3)).to.be("  a");
+      expect("a".padRight(3)).to.be("a  ");
 
       expect("a".pad(5, ".-")).to.be(".-a.-");
     });
@@ -93,8 +93,8 @@ describe("String", function () {
 
   describe("#trim()", function () {
     it("removes whitespace characters from sides of the string", function () {
-      expect("   \r\n  \t    Hello ".ltrim()).to.be("Hello ");
-      expect(" Hello   \r\n  \t    ".rtrim()).to.be(" Hello");
+      expect("   \r\n  \t    Hello ".trimLeft()).to.be("Hello ");
+      expect(" Hello   \r\n  \t    ".trimRight()).to.be(" Hello");
       expect("   \r\n  \t    Hello   \r\n  \t    ".trim()).to.be("Hello");
     });
   });
