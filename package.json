@@ -1,6 +1,6 @@
 {
   "name": "enix",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A simple JavaScript core library",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "url": "https://github.com/Razem/Enix.git"
   },
   "dependencies": {
-    "core-js": "~1.1.3"
+    "core-js": "^1.2.6"
   },
   "devDependencies": {
     "expect.js": "~0.3.1",
